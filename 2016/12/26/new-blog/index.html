@@ -1,0 +1,595 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="函数巩固函数的组成：1.函数关键字：function2.函数名称：自定义标识符3.一对圆括号：其中括号的内容是0个或者多个用英文逗号分隔开的标识符组成的列表，称为形参，它们就好像在函数中用var定义的局部变量一样；4.一对花括号：其中是有多条js语句组成的函数体，一旦函数调用，就会依次执行这些语句。
+函数的调用方式：1.作为普通函数调用：函数名称(实参列表)  或者 函数名称()2.作为对象的属性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="new blog">
+<meta property="og:url" content="http://inerdstack.com/2016/12/26/new-blog/index.html">
+<meta property="og:site_name" content="Shally">
+<meta property="og:description" content="函数巩固函数的组成：1.函数关键字：function2.函数名称：自定义标识符3.一对圆括号：其中括号的内容是0个或者多个用英文逗号分隔开的标识符组成的列表，称为形参，它们就好像在函数中用var定义的局部变量一样；4.一对花括号：其中是有多条js语句组成的函数体，一旦函数调用，就会依次执行这些语句。
+函数的调用方式：1.作为普通函数调用：函数名称(实参列表)  或者 函数名称()2.作为对象的属性">
+<meta property="og:updated_time" content="2016-12-26T16:00:19.277Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="new blog">
+<meta name="twitter:description" content="函数巩固函数的组成：1.函数关键字：function2.函数名称：自定义标识符3.一对圆括号：其中括号的内容是0个或者多个用英文逗号分隔开的标识符组成的列表，称为形参，它们就好像在函数中用var定义的局部变量一样；4.一对花括号：其中是有多条js语句组成的函数体，一旦函数调用，就会依次执行这些语句。
+函数的调用方式：1.作为普通函数调用：函数名称(实参列表)  或者 函数名称()2.作为对象的属性">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://inerdstack.com/2016/12/26/new-blog/"/>
+
+
+
+
+
+  <title> new blog | Shally </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Shally</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://inerdstack.com/2016/12/26/new-blog/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="zjw">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Shally">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Shally" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                new blog
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-26T23:58:58+08:00">
+                2016-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>函数巩固<br>函数的组成：<br>1.函数关键字：function<br>2.函数名称：自定义标识符<br>3.一对圆括号：其中括号的内容是0个或者多个用英文逗号分隔开的标识符组成的列表，称为形参，它们就好像在函数中用var定义的局部变量一样；<br>4.一对花括号：其中是有多条js语句组成的函数体，一旦函数调用，就会依次执行这些语句。</p>
+<p>函数的调用方式：<br>1.作为普通函数调用：函数名称(实参列表)  或者 函数名称()<br>2.作为对象的属性方法: 对象名.函数名称(实参列表) 或者 函数名称()<br>3.作为构造对象的构造函数：new 函数名称(实参)  或 new 函数名称()</p>
+<p>实参对象：<br>Arguments：这个对象使用在函数定义体，当函数实际调用执行的时候，arguments会被自己赋值，他是个类数组对象，是由实际传入的每个实参组成的列表，因此最大的用途就是可以方便操作任意数量的实参。<br>数据类型转换<br>Number(): 将括号中的参数转化为数字类型<br>Number(“3.14”)<br>Number(“”)<br>Number(““)<br>Number(“99 98”)<br>Number(false)<br>Number(true)<br>Number([])<br>Number({])<br>Number(null)<br>Number(undefined)<br>String(): 将括号中的参数转化为字符串类型<br>String(3)   等价于 var num = 3; num.toString()<br>String(true)<br>String(false)<br>String([])<br>String({})<br>String(0)<br>String(null)<br>String(undefined)</p>
+<p>数字类型与字符串类型<br>数字与字符串类型在js中是互通的，例如3 转化为字符串就是”3”, 3 == “3”, js比较会进行自动类型转化。<br>两者互相转化的方法：<br>方法一：利用String(),toString() 与Number();<br>方法二：<br>数字转化为字符串，可以通过+一个空字符串，因为数字与字符串进行+运算，数字类型会自动转化为字符串; 例如: 4+ “” —&gt;“4”<br>字符串转化为数字，可以通过-0, 因为数字与字符串进行- 运算，字符串类型会自动类型转化为数字类型；例如：”4” -0 —&gt;4</p>
+<p>Boolean(): 将括号中的参数转化为布尔类型<br>Boolean(1)<br>Boolean(0)<br>Boolean(NaN)<br>Boolean(null)<br>Boolean(“null”)<br>Boolean(undefined)<br>Boolean([])<br>Boolean(“”)<br>Boolean(““)<br>Boolean({})<br>自动数据类型转换(隐式类型转化)<br>3+”aa” == &gt;“3” + “aa” ==&gt;“3aa”<br>“3” - 1 ==&gt; 3 - 1 ==&gt; 2<br>5 + null ==&gt; 5 + 0 ==&gt; 5<br>“5” + null ==&gt;“5” + “null” ==&gt;“5null”<br>“4” <em> “7” ==&gt; 4 </em> 7 ==&gt; 28<br>null == undefined  ==&gt; false == false ==&gt; true<br>3 == “3” ==&gt; 3 == 3 ==&gt; true<br>5+true ==&gt; 5 + 1 ==&gt; 6<br>Html事件<br>Html事件含义：HTML 事件是发生在 HTML 元素上的事情。<br>Html事件触发分类：浏览器行为(页面加载完成)，用户行为(点击鼠标，点击键盘)<br>Html事件举例：onload,onchange,onkeydown,onmouseover,onclick<br>Html事件作用：浏览器行为，表单验证，用户交互<br>Html事件使用：作为标签元素属性<br>Html事件响应：某个事件发生后，我们人为控制代码做出的一些反应。<br>Html事件响应设置：设置为某个事件的属性值<button onclick="this.innerHTML=Date()">现在时间</button><br>Keycode + fromCharCode()<br>鼠标事件：<br>onclick  ondblclick   onmousedown   onmouseup   onmouseover<br>Onmouseout   onmousemove<br>键盘事件：<br>Onkeydown  onkeypress   onkeyup<br>HTML事件：<br>Onload  onunload   onselect   onchange   Onfocus  onblur   onsubmit<br>Onreset   onresize   onscroll   onabort   ondragdrop   onError  onmove</p>
+<p>正则表达式（day06专题）<br>正则表达式定义：正则表达式（英语：Regular Expression，在代码中常简写为regex、regexp或RE）使用单个字符串来描述、匹配一系列符合某个句法规则的字符串搜索模式。搜索模式可用于文本搜索和文本替换。通俗的说，用一个特殊的“字符序列”表示一系列的字符串。这样也就可以通过这个字符序列搜索符号这种形式的字符串，以及搜索后用某个字符串替换这些字符串。<br>格式：/pattern/modifiers<br>修饰符：i（ignore忽略大小写）,g(global 全局), m(mutil 多行)<br>正则表达式常用方法：<br>search() –查询位置<br>定义：用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，并返回子串的起始位置。<br>举例：<br>var str = “Visit bbb”;<br>var n = str.search(/bbb/i);<br>用法二：search() 方法使用字符串search 方法可使用字符串作为参数。字符串参数会转换为正则表达式：检索字符串中 “w3cschool” 的子串：var str = “Visit aaa!”;<br>var n = str.search(“aaa”);<br>replace() – 修改<br>定义：用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。<br>var str = “Visit aaa!”;<br>var res = str.replace(/aaa/i, “bbb”);     //Visit bbb!<br>test()– 检测匹配<br>定义：检测一个字符串是否匹配某个模式，如果字符串中含有匹配的文本，则返回 true，否则返回 false。<br>//用于搜索字符串中的字符 “e”<br>var patt = /e/;<br>patt.test(“The best things in life are free!”);字符串中含有 “e”，所以该实例输出为：true<br>exec() –<br>定义：exec() 方法用于检索字符串中的正则表达式的匹配。该函数返回一个数组，其中存放匹配的结果。如果未找到匹配，则返回值为 null。<br>ar /fe/.exec(“The best things in life are free!”)   //[“fe”]</p>
+<p>正则实用场景：<br>我们现在需要把文件中所有的张三找出来，word提供了全文搜索匹配功能，类似正则的search方法，然后需要把张三名字换成李四，word就提供了批量替换方法，这里也是正则的使用，对应replace方法。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/26/my-word/" rel="next" title="my word">
+                <i class="fa fa-chevron-left"></i> my word
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="zjw" />
+          <p class="site-author-name" itemprop="name">zjw</p>
+          <p class="site-description motion-element" itemprop="description">start form zero</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zjw</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
