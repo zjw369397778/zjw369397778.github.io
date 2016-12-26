@@ -1,0 +1,623 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="正则表达式定义：正则表达式(Regular Expression),是由一些普通字符和特殊字符格式组成的一串字符表达式，这个表达式用以描述一种特定的字符规则，符合这个规则的字符串就是OK的，反之不OK。
+作用：有些场景下，合格的字符串不是一个，而是一些，是一个字符串集合，这些字符串都符合某些规则。例如，我们的身份证号码校验，电话号码校验，邮箱校验，正确答案不是固定的，而是符合一定规则的字符序列。因">
+<meta property="og:type" content="article">
+<meta property="og:title" content="my word">
+<meta property="og:url" content="http://inerdstack.com/2016/12/26/my-word/index.html">
+<meta property="og:site_name" content="Shally">
+<meta property="og:description" content="正则表达式定义：正则表达式(Regular Expression),是由一些普通字符和特殊字符格式组成的一串字符表达式，这个表达式用以描述一种特定的字符规则，符合这个规则的字符串就是OK的，反之不OK。
+作用：有些场景下，合格的字符串不是一个，而是一些，是一个字符串集合，这些字符串都符合某些规则。例如，我们的身份证号码校验，电话号码校验，邮箱校验，正确答案不是固定的，而是符合一定规则的字符序列。因">
+<meta property="og:updated_time" content="2016-12-26T12:52:47.783Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="my word">
+<meta name="twitter:description" content="正则表达式定义：正则表达式(Regular Expression),是由一些普通字符和特殊字符格式组成的一串字符表达式，这个表达式用以描述一种特定的字符规则，符合这个规则的字符串就是OK的，反之不OK。
+作用：有些场景下，合格的字符串不是一个，而是一些，是一个字符串集合，这些字符串都符合某些规则。例如，我们的身份证号码校验，电话号码校验，邮箱校验，正确答案不是固定的，而是符合一定规则的字符序列。因">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://inerdstack.com/2016/12/26/my-word/"/>
+
+
+
+
+
+  <title> my word | Shally </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Shally</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://inerdstack.com/2016/12/26/my-word/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="zjw">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Shally">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Shally" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                my word
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-26T20:47:40+08:00">
+                2016-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>正则表达式<br>定义：<br>正则表达式(Regular Expression),是由一些普通字符和特殊字符格式组成的一串字符表达式，这个表达式用以描述一种特定的字符规则，符合这个规则的字符串就是OK的，反之不OK。</p>
+<p>作用：<br>有些场景下，合格的字符串不是一个，而是一些，是一个字符串集合，这些字符串都符合某些规则。例如，我们的身份证号码校验，电话号码校验，邮箱校验，正确答案不是固定的，而是符合一定规则的字符序列。因此正则表达式常用来文本中搜索、匹配或替换特定形式的文本。</p>
+<p>举个例子：<br>日常生活我们玩游戏，说名字中带有冰的人出列，那么“李冰冰”，“李冰”，“范冰冰”，“张冰”都是符合条件的答案。</p>
+<p>初次邂逅正则<br>        var regexp = /^1[3-9]\d{9}$/;</p>
+<pre><code>var input = &quot;15513513550&quot;;
+console.log(regexp.test(input));    //true
+
+var input = &quot;25513514920&quot;;
+console.log(regexp.test(input));    //false
+
+var input = &quot;13313514550434324&quot;;
+console.log(regexp.test(input));    //false
+
+var input = &quot;a1012&quot;;
+console.log(regexp.test(input));    //false
+</code></pre><p>正则表达式格式<br>/pattern/attributes<br>pattern: 字符串匹配规则<br>attribute：修饰符<br>修饰符    含义    示例<br>i    ignoreCase,执行对大小写不敏感的匹配    /is/i<br>g    global,执行全局匹配(査找所有匹配而不是在第一次匹配之后停止）    /is/g</p>
+<p>m    multiline,允许执行多行匹配        /^is$/m<br>注：修饰符可以组合使用，如/is/igm<br>注：修饰符m对^和$匹配会产生影响</p>
+<p>说明：</p>
+<ul>
+<li>常量字符串左右不能添加’  ‘或者” ”。例如/aaa/ 表示常量”aaa”</li>
+<li>两个/不能省略。</li>
+<li>参数pattern是一个正则表达式字符串。</li>
+<li>参数attributes是一个可选的字符串，可以在”g”、”i”和”m”范围内指定，分别用于指定g(global)全局匹配、i(ignoreCase)忽略大小写的匹配和m(multiline)多行匹配。</li>
+</ul>
+<p>创建正则表达式<br>两种方法：<br>1、直接量语法：<br>        var part1 = /pattern/attributes;<br>        var regexp1 = /\d{2,3}/ig;<br>2、调用RegExp构造方法：<br>        var part2 = new RegExp(pattern,attributes);<br>        var regexp2 = new RegExp(‘\d{2,3}’,’ig’);<br>正则表达式定义<br>常量字符串<br>常量字符串就是一个普通的字符串，不含有特殊的字符。使用//将这个字符串直接包裹就构成了一个简单的正则表达式，注意前面说明提到的，正则表达式中，常量字符串写在//中间时，不加单引号或者双引号。<br>        var regexp = /ipod/;<br>        var data = ‘Apple iPod id No.123 cool?’<br>        console.log(regexp.test(data));            //false<br>正则表达式特殊字符<br>字符    含义    示例<br>[^]    匹配不等于[]的字符    /[^a]/<br>^    匹配字符串的开头    /^a/<br>$    匹配字符串的结尾    /a$/<br>\b    匹配单词的边界    /\bhis\b/<br>\B    匹配单词的非边界    /\Bhis\B/<br>?=x    匹配其后紧接X的字符串    /do(?=not)/<br>?!x    匹配其后没有紧接X的字符串    /do(?!not)/</p>
+<p>正则表达式定义字符重复<br>规则写法    含义    示例<br>n?    匹配零次或一次字符n    /a?/<br>n<em>    匹配零次或多次字符n    /a</em>/<br>n+    匹配一次或多次字符n    /a+/<br>n{x}    匹配字符n出现x次    /a{3}/<br>n{x,y}    匹配字符n出现x到y次    /a{2,4}/<br>n{x,}    匹配字符n的出现&gt;=x次    /a{3,}/</p>
+<p>n？ 例子：<br>      var regexp = /a?bc/;<br>      //问号表示匹配0次或者一次，所以没有a,或至少有一个a都是ok，<br>      //也就是说只要有’bc’子串，或者‘abc’都是ok<br>      console.log(regexp.test(‘bc’));                 //true  ‘bc’<br>      console.log(regexp.test(‘ab’));                //false<br>      console.log(regexp.test(‘aaabc’));            //true  ‘abc’<br>      console.log(regexp.test(‘aacbc’));            //true, ‘bc’</p>
+<p>n+ 例子<br>      var regexp = /a+bc/;<br>      //+表示匹配1次或多次，所以必须至少有一个a才ok，<br>      //也就是说’abc’子串，或者‘aabc’，‘aaaaabc’等是ok<br>      console.log(regexp.test(‘bc’));                 //false<br>      console.log(regexp.test(‘ab’));                //false<br>      console.log(regexp.test(‘aaabc’));            //true  ‘aaabc’<br>      console.log(regexp.test(‘abc’));            //true, ‘abc’</p>
+<p>n{x, y }<br>  var regexp = /a{2,4}bc/;<br>      //{2,4}表示a出现2个~4个是ok,，<br>      //也就是说只有’aabc’子串，或者‘aaabc’，‘aaaabc’是ok<br>      console.log(regexp.test(‘bc’));                 //false<br>      console.log(regexp.test(‘abc’));                //false<br>      console.log(regexp.test(‘aabc’));            //true  ‘aabc’<br>      console.log(regexp.test(‘aaaaabc’));            //true, ‘aaaabc’<br>正则表达式定义分组范围<br>正则表达式使用如下语法匹配一个范围内的一个字符，结合上面所讲，只要匹配到这个范围的一个字符就可以：<br>语法    含义    示例<br>[abc]    匹配指定集合内的任一字符    /[3458]/<br>[^abc]    匹配不在指定集合内的任意字符    /[^12679]/<br>[0-9]    匹配任一个数字    /[0-9]/<br>[a-z]    匹配任一个小写字符    /[a-z]/<br>[A-Z]    匹配任一个大写字符    /[A-Z]/<br>[A-z]    匹配大写A到小写z的所有字符，<br>即 A-Z[]^_’a-z    /[A-z]/<br>exp1|exp2    使用丨进行条件选择    /ex|Ex| post | Post/<br>(exp1)    使用()指定分组——子表达式    </p>
+<p>[abc]<br>     var regexp = /[abc]/;<br>      //[abc]表示匹配上其中的一个字符即可，都没有才是false<br>      regexp.test(“ade”);   //true<br>      regexp.test(“def”);   //false<br>[^abc]<br>     var regexp = /[^abc]/;<br>      //[^abc]表示匹配上不是中括号中字符外其他一个字符即可，都没有才是false<br>      regexp.test(“ade”);   //true   匹配“d”,”e”<br>      regexp.test(“ab”);   //false  </p>
+<p>/[a-z]|8|3/<br>      var regexp = /[aze]|3|9/;<br>      //表示匹配上中括号的一个字符或者3，或者9，都没有才是false<br>      regexp.test(“ade”);   //true   匹配“a”,”e”<br>      regexp.test(“d”);   //false<br>      regexp.test(“3e”);   //true  匹配“3”<br>/[^(abc)]/<br>       var regexp = /[^(abc)]/;<br>      //^表示不等于后面紧跟字符，()成为一个单元，因此就是^同时作用于a,b,c<br>      //也就是既不能匹配a,也不能匹配b,也不能匹配c<br>      regexp.test(“ade”);   //true   匹配“a”,”e”<br>      regexp.test(“d”);   //false  </p>
+<p>特殊元字符<br>正则表达式中可以使用如下元字符引用来进行简化<br>语法    含义    示例<br>\d    匹配一个数字    /\d/等价于/[0-9]/<br>\D    匹配一个非数字    /\D/等价于/[^0-9]/<br>\w    匹配一个数字/字母/下划线    /\w/等价于/[0-9a-zA-Z<em>]/<br>\W    匹配一个非数字/字母/下划线    /\W/等价于/[^0-9a-zA-Z</em>]/<br>\s    匹配一个空白字符（space）    /\s/等价于/[\n\r\t\v\f]/<br>\S    匹配一个非空白字符    /\S/等价于/[^\n\r\t\v\f]/<br>.    匹配除回车和换行以外的任何单个字符    /./等价于/[^\n\r]/</p>
+<p>总结：<br>正则表达式本质是定义了一个子串规则，所测试的字符串应该是大于等于这个子串的。也就是说例如，定义的规则是/abc/, 那么所测试字符串至少应该包含有’abc’这样一个substring, 否则就是不成立。<br>正则表达式对象属性<br>属性名    描述<br>global    （只读）RegExp对象是否具有g修饰符<br>IgnoreCase    （只读）RegExp对象是否具有i修饰符<br>multiline    （只读）RegExp对象是否具有m修饰符<br>lastIndex    用于设置/获取下次匹配的起始位置<br>source    （只读）返回模式匹配的起始位置<br>$1—$9    （全局属性）指代最近一次搜索中某个子表达式匹配的文本<br>注：没有使用g修饰符的RegExp对象不能使用lastIndex属性<br>注：创建的正则对象，被 括弧 括起来的部分，从左到右，依次是$1…$9。</p>
+<p>正则表达式应用<br>string 对象的replace方法<br>第一个参数既可以是一个固定的子串，也可以是一个正则表达式对象<br>            var regexp = /javascript/ig;<br>            var data = ‘Write javascript should follow javaScript rules –javascript said’;<br>            var result = data.replace(regexp,’JavaScript’);<br>            document.write(result);</p>
+<pre><code>var regexp = /(red|green|blue)/ig;
+        var data = &apos;Flowers are red,blue,yellow,or green&apos;;
+        var result = data.replace(regexp,&apos;&lt;span style=&quot;color:$1;&quot;&gt;$1&lt;/span&gt;&apos;);
+        document.write(result);
+</code></pre><p>string对象的match方法<br>返回一个或多个子串/正则表达式的匹配</p>
+<p>string对象的search方法<br>返回第一次出现匹配指定正则表达式子串的下标，若没有则返回-1<br>var regexp = /\bdo\b/ig;<br>            var data = ‘He dose told to do’;<br>            console.log(data.search(regexp));<br>            //16<br>string对象的split方法<br>使用一个指定的字符串或正则表达式，对原字符串进行拆分，返回拆得的子字符串。<br>    var regexp = /\s+/;<br>            var data = ‘How are you ‘;<br>            var arr = data.split(regexp);<br>            console.log(arr);<br>            //[‘How’,’are’,’you’,’’]</p>
+<p>举例说明<br>//1.校验是否全由数字组成<br>/^[0-9]{1,20}$/<br>^ 表示打头的字符要匹配紧跟^后面的规则<br>$ 表示打头的字符要匹配紧靠$前面的规则<br>[ ] 中的内容是可选字符集<br>[0-9] 表示要求字符范围在0-9之间<br>{1,20}表示数字字符串长度合法为1到20，即为[0-9]中的字符出现次数的范围是1到20次。</p>
+<p>//2.校验密码：只能输入6-20个字母、数字、下划线<br>/^(\w){6,20}$/</p>
+<p>//3.校验用户姓名：只能输入1-30个字母组成的字符串<br>/^[a-zA-Z]{1,  30}$/ </p>
+<p>//4.校验URL<br>/^http[s]{0,1}:\/\/.+$/ 或 /^http[s]{0,1}:\/\/.{1,n}$/ (表示url串的长度为length(“https://”) + n )</p>
+<p>//5.校验纯中文字符<br>/^[\u4E00-\u9FA5]+$/</p>
+<p>[\u4E00-\u9FA5] ：是中文字符集的范围吧</p>
+<p>封装常用正则函数<br>//校验手机号码：必须以数字开头，除数字外，可含有“-”<br>function isMobil(s)<br>{<br>var patrn=/^[+]{0,1}(\d){1,3}[ ]?([-]?((\d)|[ ]){1,12})+$/;<br>if (!patrn.exec(s)) return false<br>return true<br>}</p>
+<p>//校验密码：只能输入6-20个字母、数字、下划线<br>function isPasswd(s)<br>{<br>var patrn=/^(\w){6,20}$/;<br>if (!patrn.exec(s)) return false<br>return true<br>}</p>
+<p>//校验用户姓名：只能输入1-30个以字母开头的字串<br>function isTrueName(s)<br>{<br>var patrn=/^[a-zA-Z]{1,30}$/;<br>if (!patrn.exec(s)) return false<br>return true<br>}</p>
+<p>//校验登录名：只能输入5-20个以字母开头、可带数字、“<em>”、“.”的字串<br>function isRegisterUserName(s)<br>{<br>var patrn=/^[a-zA-Z]{1}([a-zA-Z0-9]|[.</em>]){4,19}$/;<br>if (!patrn.exec(s)) return false<br>return true<br>}</p>
+<p>//校验是否全由数字组成<br>function isDigit(s)<br>{<br>var patrn=/^[0-9]{1,20}$/;<br>if (!patrn.exec(s)) return false<br>return true<br>}</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="zjw" />
+          <p class="site-author-name" itemprop="name">zjw</p>
+          <p class="site-description motion-element" itemprop="description">start form zero</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zjw</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
